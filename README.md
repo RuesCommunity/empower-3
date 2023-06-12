@@ -188,23 +188,23 @@ sed -i "/EMPOWER_/d" $HOME/.bash_profile
 
 ### Odülleri talep et
 ```
-empowerd tx distribution withdraw-all-rewards --from $WALLET --chain-id circulus-1 --gas auto --gas-adjustment 1.5
+empowerd tx distribution withdraw-all-rewards --from kriptosekici --chain-id circulus-1 --gas auto --gas-adjustment 1.5
 ```
 ### Odülleri ve komisyonları talep et validator
 ```
-empowerd tx distribution withdraw-rewards $VALOPER_ADDRESS --from $WALLET --commission --chain-id circulus-1 --gas auto --gas-adjustment 1.5 -y
+empowerd tx distribution withdraw-rewards empowervaloper18cewy8gxcr8qvpgkz055psy0nc7hm2v6a0sqnj --from kriptosekici --commission --chain-id circulus-1 --gas auto --gas-adjustment 1.5 -y
 ```
 ### Ne kadar mangır var
 ```
-empowerd query bank balances $WALLET_ADDRESS
+empowerd query bank balances empower18cewy8gxcr8qvpgkz055psy0nc7hm2v695w0a8
 ```
 ### Kendine delege et ( $(empowerd keys show $WALLET --bech val -a) kendi valoperınızı kod çağırır valoper yazmıcaz  cüzdna yazıcaz sadece )
 ```
-empowerd tx staking delegate $(empowerd keys show $WALLET --bech val -a) 1000000umpwr --from $WALLET --chain-id circulus-1 --gas auto --gas-adjustment 1.5 -y
+empowerd tx staking delegate $(empowerd keys show $WALLET --bech val -a) 1000000umpwr --from kriptosekici --chain-id circulus-1 --gas auto --gas-adjustment 1.5 -y
 ```
 ### Düz Delegate ( kendinize edicekseniz valoper yazıcanız yada baskasına edicekseniz onu  tabi cüzdanda yazılcak )
 ```
-empowerd tx staking delegate <TO_VALOPER_ADDRESS> 1000000umpwr --from $WALLET --chain-id circulus-1 --gas auto --gas-adjustment 1.5 -y
+empowerd tx staking delegate empowervaloper18cewy8gxcr8qvpgkz055psy0nc7hm2v6a0sqnj 1000000umpwr --from kriptosekici --chain-id circulus-1 --gas auto --gas-adjustment 1.5 -y
 ```
 ### Bi fakirden baska fakire redelege
 ```
